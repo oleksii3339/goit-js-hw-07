@@ -18,7 +18,8 @@ const createGalleryItem = ({ preview, original, description }) => {
   link.appendChild(image);
   listItem.appendChild(link);
 
-  return listItem;
+  
+    return listItem;
 };
 
 const renderGallery = (galleryItems) => {
