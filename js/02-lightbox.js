@@ -14,6 +14,7 @@ const createGalleryItem = ({ preview, original, description }) => {
   image.classList.add("gallery__image");
   image.src = preview;
   image.alt = description;
+  
 
   link.appendChild(image);
   listItem.appendChild(link);
