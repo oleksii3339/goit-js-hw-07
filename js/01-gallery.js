@@ -38,15 +38,19 @@ gallery.addEventListener('click', (event) => {
 
   const instance = basicLightbox.create(`<img src="${imageSrc}" width="800" height="600">`);
   instance.show();
+  isCloseModal(instance);
 });
 
-document.addEventListener('keydown', (event) => {
-  if (event.key === 'Escape') {
-    const instance = basicLightbox.getInstance();
-    if (instance) {
-      instance.close();
-    }
-  }
-});
+const isCloseModal = (modal) => {
+  if (modal.visible()) {
+    document.addEventListener("keydown", (event) => {
+      const keyName = event.key;
+      if (keyName !== "Escape") {
+        return 
+      }
+      modal.close();
+  }) 
+}
+} 
 
 console.log(galleryItems);
